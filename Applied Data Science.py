@@ -84,11 +84,14 @@ def show_stat(title, df_stats):
     # using Kurtosis method
 
     print("======kurtosis======")
-    print(df_stats.kurtosis())
+    kur = pd.DataFrame(sp.kurtosis(df_stats),
+                       index=df_stats.columns, columns=[""])
+    print(kur)
     # using Skewness method
 
     print("======skewness======")
-    print(df_stats.skew())
+    ske = pd.DataFrame(sp.skew(df_stats), index=df_stats.columns, columns=[""])
+    print(ske)
     print()
 
 
