@@ -77,18 +77,18 @@ def show_stat(title, df_stats):
     # using Decrible method
     print("======Describe=====")
     print(df_stats.describe())
+    
     # using Median method
-
     print("======median======")
     print(df_stats.median())
+    
     # using Kurtosis method
-
     print("======kurtosis======")
     kur = pd.DataFrame(sp.kurtosis(df_stats),
                        index=df_stats.columns, columns=[""])
     print(kur)
+    
     # using Skewness method
-
     print("======skewness======")
     ske = pd.DataFrame(sp.skew(df_stats), index=df_stats.columns, columns=[""])
     print(ske)
